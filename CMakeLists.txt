@@ -1,11 +1,11 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.14)
-project(rshell-AR)
+project(rhoshell)
 
 ADD_SUBDIRECTORY(googletest)
 
 SET(CMAKE_CXX_STANDARD 11)
 
-ADD_EXECUTABLE(rshell
+ADD_EXECUTABLE(rhoshell
     src/main.cpp
     src/Parser.cpp
     src/Semicolon.cpp

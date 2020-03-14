@@ -43,5 +43,5 @@ void prompt(){
     write(STDOUT_FILENO, " \e[1;1H\e[2J",12);
     init = 0;
   }
-  printf("rshell ~ $ ");
+  printf("rhoshell ~ ");
 }

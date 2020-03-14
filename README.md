@@ -1,4 +1,4 @@
-# CS 100 Programming Project
+# Rhoshell
 
 <p>Authors: Rajbir Johar</p>
 
