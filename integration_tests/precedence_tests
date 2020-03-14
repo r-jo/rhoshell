@@ -1,0 +1,2 @@
+(echo hello && echo world) || (echo hello2 && echo world2)
+(ls) && (echo hello2 || echo world2)

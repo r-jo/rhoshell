@@ -1,0 +1,6 @@
+test -e bin
+test -f googletest
+test -d googletest
+test -e bin && echo world
+test -e bin || echo world
+exit

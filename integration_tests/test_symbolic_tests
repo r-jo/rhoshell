@@ -1,0 +1,8 @@
+[ -e bin
+[ -e googletest
+[ -f googletest
+[ -d googletest
+[ -e bin ] && echo hello
+echo hello && [ -e bin]
+echo hello && [ -e notAfile.txt ]
+
