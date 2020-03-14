@@ -1,41 +1,63 @@
 # CS 100 Programming Project
-<p>Winter 2020</p>
-<p>Authors: Rajbir Johar(862104370), Arashdeep Singh(862077505)</p>
 
-<h1>Introduction</h1>
+<p>Authors: Rajbir Johar</p>
+
+# Introduction
 <p>This program is aimed to replicate the standard functions of a shell using Command Line Interface (CLI) which will be written primarily in C++. We plan to implement the basic logic operators such as `&&`, `||`, `;` as well as standard commands such as `echo`.We also want to allow for multiple commands to be run all at once.</p>
 
-<h1>Diagram</h1>
+# Steps for Installation
+
+## Basic Requirements
+
+* You must have a terminal or shell capable of running C++11.
+* You must have a minimum cmake version of 3.14.
+
+## Steps
+
+* Clone this repository into a local folder.
+* Run these commands in order:
+
+`git submodule init`
+
+`git submodule update`
+
+`cmake .`
+
+`make`
+
+`./rhoshell`
+
+# Diagram
 
 ![Image of Diagram](images/Diagram.png)
 
-<h1>Classes</h1>
+# Classes
 
 * `parse()` - Accepts user input in which it will be split and sorted into its respective functions.
 
-<h2>Base</h2>
+## Base
 
 <p>Base holds the virtual functions.</p>
 
 * `virtual execute() = 0` - requires subclasses to implement this function
 * `virtual getCommand() = 0`
 
-<h2>Connector Class</h2>
+## Connector Class
 
 * `Left and Right` - stores the commands that need to be connected.
 * `execute()`
 
-<h2>Command Class</h2>
+## Command Class
 
 <p>The command function accepts a string parameter.</p>
 
-<h2>"And" Class</h2>
+## "And" Class
 Also known as the `&&` . The second command will execute only if the first command executes.
 
 * `execute()`
 * `getCommand()` - returns && for testing
 
-<h2>"Or" Class</h2>
+## "Or" Class
 
 Also known as the `||` . The second command will execute if the first one fails
 to execute.
@@ -43,21 +65,21 @@ to execute.
 * `execute()`
 * `getCommand()` - returns || for testing
 
-<h2>"Semicolon" Class</h2>
+## "Semicolon" Class
 
-Also known as the `;` . Used to separate instructions. 
+Also known as the `;` . Used to separate instructions.
 
 * `execute()`
 * `getCommand()` - returns ; for testing
 
-<h2>"TestCommand" Class</h2>
+## "TestCommand" Class
 
 Tests to see if the file path exists
 
 * `execute()`
 * `getCommand()` - returns command(test) for testing
 
-<h1>Prototypes/Research</h1>
+# Prototypes/Research
 
 ```cpp
 #include <sys/types.h>
@@ -96,7 +118,7 @@ waits for the child process to end and join the master. The parser breaks the
 lines into smaller pieces. These functions will be used when waiting for other
 commands to finish. </p>
 
-<h1>Development and Testing Roadmap</h1>
+# Development and Testing Roadmap
 
 1. Understand the the entire project along with individual tasks thoroughly
    before attempting any design.
